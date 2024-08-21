@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Psychea's first website_B</title>
+    <link rel="shortcut icon" href="icon.png">
+    <style>
+        html{
+            margin: 0;  
+            padding: 0; 
+            overflow-x: hidden;
+        }
+        body{
+            width: 100%;
+            height: 2000px;
+            background-color: rgba(152, 168, 195, 0.508);
+            
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+            
+        }
+        #q{
+            color: rgb(4, 39, 39);
+        }
+        .aha{
+            font-size: 10px;
+        }
+        .ahaa{
+            font-size: 50px;
+
+        }
+
+        #qtacey{
+            position: fixed;
+            opacity: .9;
+            left:0px;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            object-fit: cover;
+        }
+
+        #ed:link{
+            text-decoration: none; 
+        }
+        #ed:hover{
+            color: rgb(37, 9, 9);
+            font-style: italic; 
+        }
+    
+
+        #textual:link{
+            color: rgb(55, 4, 4);
+            text-decoration: none; 
+        }
+        #textual:visited{
+            color: rgba(60, 108, 9, 0.435);
+            text-decoration: none;
+        }
+        #textual:hover{
+            color: rgb(97, 7, 7);
+            font-style: italic; 
+        }
+        #textual:active{
+            color: rgb(111, 43, 142);
+        
+        }
+        #another{
+            position: absolute;
+            color:rgba(209, 203, 244, 0.98);
+            background-color:#615e6ab6;
+            text-shadow: 10px -1px 10px rgba(116, 59, 202, 0.669);
+            width: 100vw;
+            right: 7vw;
+            top: 55px;
+            font-size: 20px;
+            font-family:Arial, Helvetica, sans-serif;
+            text-align:right;
+            z-index: 30;    
+        }
+        #textua1{
+            position: absolute;
+            color:rgba(222, 30, 30, 0.555);
+            text-shadow: 10px -10px 12px rgb(143, 139, 149);
+            width: 20vw;
+            height: 20px;
+            left: 5vw;
+            top: 10px;
+            font-size: 15px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align:right;
+            z-index: 100;
+        }
+
+        #jellyfish2{
+            position: absolute;
+            top: -5vh;
+            z-index:11;
+            left:10vw;
+            width: 30vw;
+            height: 15vw;
+            opacity: .6; 
+            transition:height 2s ease;
+        }
+        #jellyfish2:hover{
+            height:60vh;
+        }
+        #content-left {
+            position: absolute;
+            color: rgba(18, 37, 71, 0.808);
+            background-color: #644f5ed9;
+            text-shadow: 1px 2px 1px rgba(132, 117, 151, 0.493);
+            border: 3px solid rgba(132, 125, 134, 0.498);
+            padding: 10px;
+
+            width: 350px;
+            left: 5vw;
+            top: 100px;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            z-index: 10;
+        }
+
+        #threeaspect2 {
+               position: absolute;
+               color:rgba(16, 89, 24, 0.555);
+               background-color:#55497d6f;
+               text-shadow: 5px -30px 12px rgb(143, 139, 149);
+               width: 10vw;
+               height: 2700px;
+               right: 500px;
+               top: 80px;
+               font-size: 80px;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               text-align: left;
+               z-index: 200;
+               }
+
+        #threeaspect1{
+            position: absolute;
+            padding-right: 20px;
+            color: rgb(105, 21, 78);
+            background-color: rgba(159, 190, 190, 0.371);
+            opacity: .7;
+            width: 1000px;
+            right: 20vw;
+            top: 600px;
+            font-size: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: right;
+            z-index: 50;
+        }
+        #memory{
+            position: absolute;
+            color:rgba(229, 228, 235, 0.668);
+            background-color:#55497d6f;
+            text-shadow: 5px -10px 20px rgb(69, 55, 90);
+            width: 70px;
+            left: 20vw;
+            top: 1000px;
+            font-size: 60px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: left;
+            z-index: 200;    
+        }
+        #ocean {
+            position: fixed;
+            top: 35%;
+            left: 100px;
+            width: 350px;
+            opacity: 0.9;
+            z-index: 500;
+            border-radius: 10% 20% 10% 10%;
+        }
+        #ocean:hover {
+            opacity: 0.5;
+        }
+
+        #wave {
+            background: url(wave.gif) no-repeat;
+            background-size: 100% 100%;
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 800px;
+            height: 600px;
+            border-radius: 10% 0% 10% 10%;
+            z-index: 15;
+        }
+
+        #wave:hover {
+            background: url(light.jpg) no-repeat;
+            opacity: .7;
+            background-size: 100% 100%;
+        }
+    
+        #place {
+            position: fixed;
+            width: 18vw;
+            border-radius: 50% 30% 15% 10%;
+            bottom: 5vh;
+            right: 0vw;
+            z-index: 104;
+        }
+        .whaat{
+            font-family: sans-serif;
+        }
+        .whaat{
+            color: rgb(68, 65, 155);
+            white-space: pre;
+        }
+        .whaat1{
+            color: rgba(37, 55, 144, 0.906);
+            text-shadow: 1px 1px 2px rgba(103, 124, 141, 0.65);
+        }
+        .whaat2{
+            color: rgba(27, 53, 92, 0.88);
+            text-shadow: 2px 1px 1px rgba(91, 112, 112, 0.496);
+        }
+        .back {
+            width: 430px;
+            background: url(background.jpg) no-repeat;
+            display: block;
+            height: 400px;
+            cursor: pointer;
+            position: absolute;
+            left: 2vw;
+            bottom: 5vh;
+            z-index: 23;
+            border-radius: 0% 4% 20% 0%;
+        }
+
+        .back:hover {
+            background: url(blueglitch.png) no-repeat;
+        }
+        .connect {
+            width: 400px;
+            height: 400px;
+            border-radius: 70%;
+            top: 250px;
+            left: 20vw;
+            position: fixed;
+            cursor: pointer;
+            z-index: 1;
+        }
+        .connect:hover {
+            transform: scale(1.3);
+        }
+
+        #jellyfish1 {
+               position: absolute;
+               top: 63vh;
+               z-index:25;
+               left:7vw;
+               width: 55vw;
+               height: 35vw;
+               opacity: .6;
+        }
+
+    </style>
+</head>
+
+<body>
+    <video loop controls id="place" src="placeholder.mp4"></video>
+    <video loop controls id="qtacey" src="qtacey.mp4"></video>
+
+    <div id="textual1">  What are we <a id="textual" href="textual.html"> talking about </a> ? 
+    </div>
+
+    <div id="another" > Again what <a id="textual" href="textual.html"> are we </a> tallllking about ??
+    </div>
+
+    <div id="content-left">
+        <a id="ed" 
+        href="https://www.merriam-webster.com/dictionary/Ouroboros#:~:text=1,suggestive%20of%20the%20Ouroboros%20symbol%20%20--%3E">
+        <h2>Eternal Devour</h2>
+        </a>
+        <br/>
+        <p class="aha">I wanna know how to break the loop</p>
+        <p class="aha">In a cycle of pain and suffering</p>
+        <p class="ahaa">Does it feel the same to you </p>
+        <p>Drifting in a sea of foursquares</p>
+        <br/>
+        <p><b>I feel alone, </b></p>
+            <br/>
+        <p><b>feel like I' m Robinson Crusoe. </b></p>
+
+    </div>
+
+    <div id="threeaspect1">
+        <b>Three Aspect of Reality</b>
+        <br/>
+        <br/>
+        <br/>
+        <p>Pain</p>
+        <p>Uncertainty</p>
+        <p>Constant Work</p>
+    </div>
+
+    <div id="threeaspect2"> 
+        <b>Three Aspect of Reality</b>
+        <br/>
+        <br/>
+        <br/>
+        <p>Pain</p>
+        <p>Uncertainty</p>
+        <br/>
+        <br/>
+        <p>Constant Work</p>
+    </div>
+
+    <span class="back"></span>
+    <span id="wave"></span>
+
+    <a href="https://www.ubs.com/global/en/our-firm/art/art-collection.html"><img class="oo" id="ocean" src="ocean.gif"></a>
+    
+    <img class="connect" src="connect.jpg">
+
+    <img id="jellyfish1" src="jellyfish1.gif">
+
+    <a href="https://www.youtube.com/watch?v=5g7EAw1EKsk">
+    <img id="jellyfish2" src="jellyfish2.gif"></a> 
+    
+    <div id="memory">YOUR MEMORY WILL BE PRESERVED IN PEGS AND ARCHIVED CHAT MESSAGES</div>
+
+
+    <div class="whaat" id="hippie">
+    </br>
+    </br>   
+        Be-ins, music festivals, and other public gatherings
+        <p>
+            Also known as: flower child, hippy
+        </p>
+        <p><span id="q"> Written and fact-checked by The Editors of Encyclopaedia Britannica</span> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p>                                                                                                            Public gatherings—part music festivals, sometimes protests, 
+                                                                                          often simply excuses for celebrations of life—were an important part of the hippie movement.
+                                                                                           The first “be-in,” called the Gathering of the Tribes, was held in San Francisco in 1967. 
+                                                                                            It initiated the Summer of Love, wherein up to 100,000 members of the counterculture traveled across the United States and converged in the Haight-Ashbury district of that city. Many came for the Monterey International Pop Festival, but others were drawn to utopian promises of peace and love. 
+                                                                                             The situation, however, eventually devolved into chaos. The district succumbed to overcrowding, crime (“free love” was often used to condone rape), and unsanitary conditions. In October 1967 a mock funeral, called the “Death of the Hippie” ceremony, was held by a few of those that remained in San Francisco.
+        </p>
+        <p>Despite that symbolic end, the counterculture movement continued. 
+                Outdoor music festivals were another form of public gathering for hippies, with some 300 performances taking place in the United States between 1967 and 1971. 
+                    The best-known festivals were held in 1969: Woodstock, a three-day event in rural New York state, and the free concert at Altamont Speedway near Livermore, California. The former drew an estimated 400,000-500,000 people and became virtually synonymous with the movement. That latter, however, was hastily planned and immediately turned unruly. The Hells Angels motorcycle gang, who had been hired to provide security, beat spectators and musicians. One club member, Alan Passaro, fatally stabbed a Black teenager, Meredith Hunter, during the Rolling Stones set.
+        </p>
+        <p><span id="q">The public gatherings of hippies did not always have calamitous ends. </span>Indeed, many hippies participated in a number of teach-ins at colleges and universities in which opposition to the Vietnam War was explained, and they took part in antiwar protests and marches. They joined other protesters in the “moratorium”—a nationwide demonstration—against the war in 1969. Hippies were also involved in the development of the environmental movement. The first Earth Day was held in 1970, and many participated in teach-ins that educated listeners in the importance of environmental conservation.
+        </p>
+        Legacy
+        By the mid-1970s the movement had waned, and by the 1980s hippies had given way to a new generation of young people who were intent on making careers for themselves in business and who came to be known as yuppies (young urban professionals). 
+        Nonetheless, hippies continued to have an influence on the wider culture, seen, for example, in more relaxed attitudes toward sex, in the new concern for the environment, and in a widespread lessening of formality. Their attire and a few of their practices entered mainstream culture, and the word hippie became a broad term for a person who superficially shares some of the same interests of hippie culture, such as eating a vegetarian diet or having an interest in Eastern cultures.
+    </div>
+    
+    <div class="whaat1" id="self-control" >
+        <p>
+            Poolside convo about your summer last night (Ooh, yeah)
+            About your summer last night
+            Ain't give you no play, mm
+            Could I make you shive last night?
+            Could I make you shy on the last night? (Last night)
+            Could we make it in? Do we have time?
+        </p>
+        <p>
+            I'll be the boyfriend in your wet dreams tonight
+            Noses on a rail, little virgin wears the white
+            You cut your hair, but you used to live a blonded life
+            Wish I was there, wish we'd grown up on the same advice
+            And our time was right
+        </p>
+        <p>
+            Keep a place for me, for me
+            I'll sleep between y'all, it's nothing
+            It's nothing, it's nothing
+            Keep a place for me, for me
+        </p>
+        <p>
+            Now and then, you miss it, sounds make you cry
+            Some nights, you dance with tears in your eyes
+            I came to visit 'cause you see me like a UFO
+            That's like never, 'cause I made you use your self-control
+            And you made me lose my self-control, my self-control
+            See upcoming R&B shows
+            Get tickets for your favorite artists
+        </p>
+        <p>
+            Keep a place for me, for me
+            I'll sleep between y'all, it's nothing
+            Keep a place for me
+            It's nothing, it's nothing
+            It's nothing, it's nothing            
+        </p>
+        <p>
+            Sometimes, you'll miss it
+            And the sound will make you cry
+            And some nights, you're dancing
+            With tears in your eyes
+        </p>
+        <p>
+            I, I, I know you gotta leave, leave, leave
+            Take down some summertime
+            Give up, just tonight, 'night, 'night
+            I, I, I know you got someone comin'
+            You're spittin' game, know you got it
+            I, I, I know you gotta leave, leave, leave
+            Take down some summertime
+            Give up, just tonight, 'night, 'night
+            I, I, I know you got someone comin'
+            You're spittin' game, know you got it (Yeah)
+            I, I, I know you gotta leave, leave, leave
+            Take down some summertime
+            Give up, just tonight, 'night, 'night
+            I, I, I know you got someone comin'
+            You're spittin' game, know you got it
+        </p>
+    </div>
+
+<div class="whaat2" id="crumble">
+    <h4>
+        Crumble is a soft ballad that expresses various pressures and difficulties of life.
+    </h4>
+    <p>
+        You got room in your phone for one more distraction
+        Wonderful times
+        Time is moving too slow for me to distract you
+        I need to get back to you
+    </p>
+    <p>
+        All my friends, all my dawgs that I got back home
+        We would look up at the sky, we was 10 years old
+        I'm my brother's keeper, let these demons show
+        Southern blood run deep so that genius grow
+        From the trees I hang, so low way go
+        Bands awake us from a slumber, yeah, dawg, I know
+        These petty motherfuckers don't know 'bout Big Moe
+        Rest in peace my nigga Luke, this a test of shit for sure
+        My brother Chris put me on and I will never take that from him
+        No matter how many times he called me "faggot" in the morning
+        Best thing 'bout being Mormon was seeing the white boy storm
+        And it's not my fault I like y'all, can't really explain it
+        Became the hood's favorite, I'm not ever a main bitch
+        My nigga, I'm just like SZA, they listen so I deliver
+        They found out my name was Clifford, I hide it, sometimes I'm lying
+        I'm tired of fucking crying and hiding behind a dummy, can I?
+    </p>
+    <p>
+        I feel better with you
+        Telling you now, don't tell on the crew
+        Bet your loot hot, they tell you to move
+        Hollywood, I wish my brother would shoo
+        Take me back to my other issue
+        Was plastered with truth, feet on the roof
+        Drug in my veins, they shot up the place
+        My bro was an answer, then I was the glue
+        I don't think that they will ever get through
+        You see me standing there, heavyweight shoe
+        Me and my bro ain't never gon' choose
+        We on the loose, hands out the roof
+        Hand me my dro, I hand you your bag
+        All of my siblings end up like they dad
+        I remember what them charges was like
+        I don't want to be their burden tonight
+    </p>
+    <p>
+        The weight on my shoulders, I just can't get over
+        He won't take me back and they don't know how hard
+        They don't know how hard (They don't know how hard)
+        They don't know how hard (They don't know how hard)
+        They don't know how hard it is
+        I feel like crumbling
+        And I feel like crumbling
+        And I feel like crumbling outside of your window
+    </p>
+</div>
+</body>
+
+</html>
+
+<!--reference:
+jellyfish:
+https://www.google.com.hk/search?q=jellyfish+gif+transparent+background&newwindow=1&sca_esv=1c373269f3df7d45&sca_upv=1&rlz=1C5CHFA_enGB1024GB1024&udm=2&biw=1717&bih=944&sxsrf=ADLYWILM6R0xCxql_yCok6JPAIie057zbQ%3A1722865395879&ei=89awZs-nNcDn2roPkpvwuA4&oq=jellyfish+gif+transparent&gs_lp=Egxnd3Mtd2l6LXNlcnAiGWplbGx5ZmlzaCBnaWYgdHJhbnNwYXJlbnQqAggBMgoQABiABBhDGIoFMgUQABiABDIGEAAYBxgeMgYQABgIGB4yBhAAGAgYHjIGEAAYCBgeMgYQABgIGB5IvAxQAFgAcAF4AJABAJgBAKABAKoBALgBAcgBAJgCAaACBJgDAIgGAZIHATGgBwA&sclient=gws-wiz-serp
+cloud:
+https://www.youtube.com/watch?v=G_H3j8EZCvs
+
+https://www.merriam-webster.com/dictionary/Ouroboros#:~:text=1,suggestive%20of%20the%20Ouroboros%20symbol 
+
+
+https://www.britannica.com/topic/hippie
+
+https://genius.com/Kevin-abstract-crumble-lyrics
+
+https://genius.com/Frank-ocean-self-control-lyrics
+-->
