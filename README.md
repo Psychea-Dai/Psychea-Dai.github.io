@@ -1,2 +1,2 @@
-# psychea-d-web-art-as-site.github.io
+# Psychea-Dai.github.io
 web art as site assignment
